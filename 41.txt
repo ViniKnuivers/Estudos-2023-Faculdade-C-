@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int num, somapar = 0, somaimpar = 0;
+
+    do
+    {
+        cout << "Informe um numero:";
+        cin >> num;
+
+        if ( num % 2 == 0 )
+        {
+            somapar = somapar + num;
+        }
+        else if ( num % 2 == 1)
+        {
+            somaimpar = somaimpar + num;
+        }
+
+    } while ( num > 0 );
+
+    cout << somapar << endl << somaimpar;

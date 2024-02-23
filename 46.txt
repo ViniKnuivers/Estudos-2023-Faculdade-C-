@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int idade[3];
+   int i;
+
+   for(i = 0; i < 3; i++)
+   {
+       cout << "Entre com a idade: ";
+       cin >> idade [i];
+   }
+}
+
+
+
+
+	***	EXEMPLO DE VETOR	*** 
+
+				 > Nome
+				/
+			idade  
+		+--------------+
+		| 19 | 21 | 15 |  <-- Valores
+		+--------------+
+		  0     1    2
+		 /
+             > Índices  

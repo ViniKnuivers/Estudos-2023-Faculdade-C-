@@ -1,0 +1,65 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int notas[2][3];
+   int i,j;
+
+   for(i = 0; i < 2; i++)
+   {
+       for(j = 0; j < 3; j++)
+       {
+           cout << "Entre com nota: ";
+           cin >> notas[i][j];
+       }
+   }
+}
+
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int notas[2][3];
+   int i,j;
+
+   for(i = 0; i < 2; i++)
+   {
+       for(j = 0; j < 3; j++)
+       {
+           cout << "Entre com nota: ";
+           cin >> notas[i][j];
+       }
+   }
+   for(i = 0; i < 2; i++)
+   {
+       for( j = 0; j < 3; j++)
+       {
+           cout << notas[i][j] << " ";
+       }
+       cout << endl;
+   }
+}
+
+
+	***	     EXEMPLO DE Matriz		*** 
+
+			
+ 		        Notas  <-- Nome
+		     0   1    2    <--- Índice da Coluna	 (j)
+		   +------------+
+		 0 | 8 | 7  | 9 | 
+		   +------------+
+		 1 | 6 | 10 | 4 |  <--- Valores
+		/  +------------+
+           > Índice de Linha (i)
+
+
+** Curiosidades ** 
+  BIDIMENSIONAL
+

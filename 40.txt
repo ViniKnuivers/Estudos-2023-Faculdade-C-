@@ -1,0 +1,66 @@
+#include <iostream>
+/*2-) Considerando a medida de um lado de um quadrado informado
+pelo usuário, desenvolva um programa que calcula e mostra
+a área (lado * lado)  o perímetro (lado * 4) ou os dois
+(área e perímetro) do mesmo. Utilize a estrutura switch case
+que considera uma das quatro opções:
+
+1 para mostrar a área
+2 para mostrar o perímetro
+3 para mostrar a área e o perímetro
+0 para sair (sem mostrar nada).
+
+Caso seja informado uma opção diferente das acima,seu programa
+deve mostrar a mensagem "A opção informada é inválida!".
+*/
+using namespace std;
+
+int main()
+{
+    int lado, perimetro, area;
+    int opcao;
+
+    do
+    {
+        cout << "Informe o lado:";
+        cin >> lado;
+    }while ( lado <= 0 );
+
+    perimetro = lado*4;
+    area = lado*lado;
+
+
+    do
+    {
+        cout << "0 - SAIR" << endl << "1 - AREA" << endl << "2 - PERIMETRO" << endl << "3 - PERIMETRO E AREA" << endl;
+        cin >> opcao;
+    } while ( opcao < 0 || opcao > 3);
+
+    switch(opcao)
+    {
+        case 0:
+            {
+               cout << "Fechou";
+               break;
+            }
+
+        case 1:
+            {
+                cout << area;
+                break;
+            }
+
+        case 2:
+            {
+               cout << perimetro;
+                break;
+            }
+
+        case 3:
+            {
+                cout << perimetro << endl << area;
+                break;
+            }
+    }
+    return 0;
+}
