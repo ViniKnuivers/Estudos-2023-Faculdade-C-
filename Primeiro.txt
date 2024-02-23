@@ -1,0 +1,42 @@
+#include <iostream>
+#include <locale>
+
+using namespace std;
+
+int main()
+{
+    int  a, b, c, d;
+    bool res;
+
+
+
+    a = 10;
+    b = a * 2;
+    c = a + b;
+    d = a + c;
+
+    res = a > b;
+    setlocale(LC_ALL,"Portuguese");
+    cout << res << "  --> A é maior que B" <<endl;
+    res = (b == a*2);
+    cout << res << "  --> B é igual a a*2" <<endl;
+    res = (c != a+b);
+    cout << res << "  --> C é diferente de A+B" <<endl;
+    res = (d >= c+a);
+    cout << res << "  --> D é maior ou igual a C+A" <<endl;
+    res = (c <= d-a);
+    cout << res << "  --> C é menor ou igual a D-A" <<endl;
+    res = (b < d-b);
+    cout << res << "  --> B é menor que D-B" <<endl;
+    res = (a < b || a > c);
+    cout << res << "  --> A é menor que B ou B > C" <<endl;
+    res = (a < b && b > c);
+    cout << res << "  --> A é menor que B E B > C" <<endl;
+    res = (c != a && b != c);
+    cout << res << "  --> C é diferente de A E B é diferente de C" <<endl;
+    res = (c != c || b != c);
+    cout << res << "  --> C é diferente de C ou B é diferente de C" <<endl;
+
+
+
+}

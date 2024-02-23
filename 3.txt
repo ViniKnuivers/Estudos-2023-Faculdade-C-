@@ -1,0 +1,36 @@
+#include <iostream>
+#include <locale>
+
+using namespace std;
+
+int main()
+{
+    int num1, num2, num3;
+
+    setlocale(LC_ALL,"Portuguese");
+    cout << "Informe um numero: ";
+    cin >> num1;
+    cout << "Informe um numero: ";
+    cin >> num2;
+    cout << "Informe um numero: ";
+    cin >> num3;
+
+    if ( num1 > num2 && num1 > num3 )
+    {
+        cout << num1;
+    }
+    else if ( num2 > num1 && num2 > num3 )
+    {
+        cout << num2;
+
+    }
+    else if ( num3 > num1 && num3 > num2 )
+    {
+        cout << num3;
+
+    }
+    else
+    {
+        cout << num1 << " " << num2 << " " << num3;
+    }
+}

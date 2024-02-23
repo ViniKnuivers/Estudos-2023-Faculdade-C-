@@ -1,0 +1,28 @@
+#include <iostream>
+#include <locale>
+
+using namespace std;
+
+int main()
+{
+    int num1, num2, soma, soma30;
+
+    cout << "insira um número: ";
+    cin >> num1;
+    cout << "insira um outro número: ";
+    cin >> num2;
+
+    soma = num1 + num2;
+
+
+    if (soma >= 30)
+    {
+        soma30 = soma - 20;
+        cout << soma30;
+    }
+    else
+    {
+        soma30 = soma + 10;
+        cout << soma30;
+    }
+}
