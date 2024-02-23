@@ -1,0 +1,121 @@
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+
+{
+    int num, resto, quant100, quant50, quant20, quant10, quant5, quant2, quant1;
+
+    cout << "Digite um numero: ";
+    cin >> num;
+
+
+  quant100 = num / 100;
+  quant50 = num / 50;
+  quant20 = num / 20;
+
+  if(quant100 > 0)
+  {
+      resto = num - quant100 * 100;
+      quant50 = resto / 50;
+
+      if(quant50 > 0)
+      {
+          resto = resto - quant50 * 50;
+
+          quant20 = resto / 20;
+
+
+          if(quant20 > 0)
+          {
+              resto = resto - quant20 * 20;
+
+              quant10 = resto / 10;
+
+             if(quant10 > 0)
+             {
+                  resto = resto - quant10 * 10;
+
+                  quant5 = resto / 5;
+
+                  if(quant5 > 0)
+                  {
+                      resto = resto - quant5 * 5;
+
+                      quant2 = resto / 2;
+
+                      if(quant2 > 0)
+                      {
+                          resto = resto - quant2 * 2;
+
+                          quant1 = resto / 1;
+
+                          if(quant1 > 0)
+                          {
+                              resto = resto - quant1 * 1;
+                          }
+                      }
+                  }
+             }
+          }
+      }
+      else
+      {
+          quant20 = resto / 20;
+
+
+          if(quant20 > 0)
+          {
+              resto = resto - quant20 * 20;
+
+              quant10 = resto / 10;
+          }
+          else
+          {
+              quant10 = resto / 10;
+
+              if(quant10 > 0)
+              {
+                  resto = resto - quant10 * 10;
+
+                  quant5 = resto / 5;
+              }
+              else
+              {
+                  quant5 = resto / 5;
+
+                  if(quant5 > 0)
+                  {
+                      resto = resto - quant5 * 5;
+
+                      quant2 = resto / 2;
+                  }
+                  else
+                  {
+                      quant2 = resto / 2;
+                  }
+              }
+          }
+      }
+
+  }
+  else
+  {
+      if(quant50 > 0)
+      {
+          resto = num - quant50 * 50;
+      }
+  }
+
+  cout << quant100 << endl;
+  cout << quant50 << endl;
+  cout << quant20 << endl;
+  cout << quant10 << endl;
+  cout << quant5 << endl;
+  cout << quant2 << endl;
+  cout << quant1 << endl;
+  cout << resto << endl;
+
+}

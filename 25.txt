@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+    const int n = 5;
+
+    void populaVetor(int vetor[n]);
+    void imprimeVetor(int vetor[n]);
+
+int main()
+{
+    int vetor[n];
+    populaVetor(vetor);
+    imprimeVetor(vetor);
+}
+
+void populaVetor(int vetor[n])
+{
+    for(int i = 0; i < n; i++)
+    {
+            vetor[i] = i*3;
+    }
+}
+
+void imprimeVetor(int vetor[n])
+{
+    for(int i = 0; i < n; i++)
+    {
+        cout << vetor[i] << " " <<endl;
+    }
+}

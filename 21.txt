@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+
+{
+    int vetor[] = {9,8,7};
+
+    int *pntVetor = vetor;
+
+    for(int i = 0; i < 3;i++)
+    {
+        cout << *pntVetor << " " << pntVetor;
+
+        ++pntVetor;
+    }
+}

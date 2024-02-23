@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+void zerodez(int numero, int contador);
+
+int main()
+{
+    int numero = 10;
+    int contador = 1;
+    zerodez(numero,contador);
+}
+
+void zerodez(int numero,int contador)
+{
+    cout << contador;
+    if(numero > contador)
+    {
+    zerodez(numero, ++contador);
+    }
+
+}
