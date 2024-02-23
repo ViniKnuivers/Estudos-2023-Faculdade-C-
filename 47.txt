@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n1, n2, resultado;
+
+    cout << "Informe o seu número: ";
+    cin >> n1;
+
+    cout << "Informe o segundo número: ";
+    cin >> n2;
+
+    if (n1 > n2)
+    {
+        cout << "O primeiro número é maior que o segundo";
+    }
+    else if (n1 < n2)
+    {
+        cout << "O segundo número é maior que o primeiro";
+    }
+    else
+    {
+        cout << "Os números são iguais.";
+    }
+
+
+}

@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int lim1, lim2;
+
+
+    cout << "Começo da sequencia: " <<endl;
+    cin >> lim1;
+
+    cout << "Final da sequencia: " <<endl;
+    cin >> lim2;
+
+    if(lim1 < lim2)
+    {
+        for(lim1; lim1 <= lim2; lim1++)
+        {
+            cout << lim1 <<endl;
+        }
+    }
+    else
+    {
+        for(lim2; lim2 <= lim1; lim2++)
+        {
+            cout << lim2 <<endl;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int lim1, lim2;
+
+    do
+    {
+        cout << "Começo da sequencia: " <<endl;
+        cin >> lim1;
+
+        cout << "Final da sequencia: " <<endl;
+        cin >> lim2;
+    }while( lim1 > lim2 );
+
+    for(lim1; lim1 <= lim2; lim1++)
+    {
+        cout << lim1 <<endl;
+    }
+
+}

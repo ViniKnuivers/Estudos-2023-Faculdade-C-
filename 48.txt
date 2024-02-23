@@ -1,0 +1,41 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int categoria;
+    float valorvenda, valorfinal = 0;
+
+    cout << "Informe o valor de compra: ";
+    cin >> valorvenda;
+
+
+    cout << "Status do Cliente: " <<endl;
+    cout << "1 - Eventual" <<endl;
+    cout << "2 - Vip" <<endl;
+    cout << "3 - Funcionario" <<endl;
+    cin >> categoria;
+
+    switch(categoria)
+    {
+        case 1:
+            valorfinal = valorvenda - (valorvenda * 0.05);
+            cout << valorfinal;
+            break;
+
+        case 2:
+            valorfinal = valorvenda - (valorvenda * 0.10);
+            cout << valorfinal;
+            break;
+
+        case 3:
+            valorfinal = valorvenda - (valorvenda * 0.5);
+            cout << valorfinal;
+            break;
+
+        default:
+            cout << "Não existe essa forma de cliente";
+            break;
+    }
+    return 0;

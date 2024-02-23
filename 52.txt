@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int lim1, lim2, tenso, lim;
+
+    cout << "Começo da sequencia: " <<endl;
+    cin >> lim;
+
+    cout << "Final da sequencia: " <<endl;
+    cin >> lim2;
+
+    for(int lim1 = lim; lim1 >= lim2; lim1--)
+    {
+        cout << lim1 <<endl;
+    }
+
+
+}

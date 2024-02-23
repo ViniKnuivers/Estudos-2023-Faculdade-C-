@@ -1,0 +1,62 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int categoria;
+    float valorvenda, valorfinal = 0, valordesconto = 0;
+
+    do
+    {
+        cout << "Informe o valor de compra: ";
+        cin >> valorvenda;
+    }while(valorvenda <= 0);
+
+    do
+    {
+        cout << "Status do Cliente: " <<endl;
+        cout << "1 - Eventual" <<endl;
+        cout << "2 - Vip" <<endl;
+        cout << "3 - Funcionario" <<endl;
+        cout << "4 - Estrangeiro vagabundo" <<endl;
+        cin >> categoria;
+    }while(categoria <= 0 || categoria > 5);
+
+
+    switch(categoria)
+    {
+        case 1:
+            valorfinal = valorvenda - (valorvenda * 0.05);
+            cout << " Valor Venda: " << valorvenda <<endl;
+            cout << " Valor de Desconto: " << valorvenda * 0.05 <<endl;
+            cout << " Valor Final: " << valorfinal <<endl;
+            break;
+
+        case 2:
+            valorfinal = valorvenda - (valorvenda * 0.10);
+            cout << " Valor Venda: " << valorvenda <<endl;
+            cout << " Valor de Desconto: " << valorvenda * 0.10 <<endl;
+            cout << " Valor Final: " << valorfinal <<endl;
+            break;
+
+        case 3:
+            valorfinal = valorvenda - (valorvenda * 0.5);
+            cout << " Valor Venda: " << valorvenda <<endl;
+            cout << " Valor de Desconto: " << valorvenda * 0.5 <<endl;
+            cout << " Valor Final: " << valorfinal <<endl;
+            break;
+
+        case 4:
+            valorfinal = valorvenda - (valorvenda * 0.8);
+            cout << " Valor Venda: " << valorvenda <<endl;
+            cout << " Valor de Desconto: " << (valorvenda * 0.8) <<endl;
+            cout << " Valor Final: " << valorfinal <<endl;
+            break;
+
+    }
+    return 0;
+
+
+
+}
