@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   float vetUnitario[4];
+   int vetQuantidade[4];
+   int vetProduto[4];
+   float TotalValor = 0;
+   int TotalQuant = 0;
+   int i;
+
+   for(i = 0; i < 4; i++)
+   {
+       cout << "Entre com Valor Unitario: ";
+       cin >> vetUnitario [i];
+
+       cout << "Entre com Quantidade: ";
+       cin >> vetQuantidade [i];
+
+       vetProduto[i] = vetUnitario[i] * vetQuantidade[i];
+       TotalValor = TotalValor + vetProduto[i];
+       TotalQuant = TotalQuant + vetQuantidade[i];
+
+   }
+
+    for(i = 0; i < 4; i++)
+    {
+        cout << vetUnitario[i] << " " << vetQuantidade[i] << " " << vetProduto[i] <<endl;
+    }
+
+     cout << "O valor total: " <<TotalValor <<endl;
+     cout << "A quantidade total: " <<TotalQuant <<endl;
+
+}

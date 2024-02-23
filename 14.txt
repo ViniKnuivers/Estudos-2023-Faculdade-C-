@@ -1,0 +1,52 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int numero[2][3];
+   int espelho[2][3];
+   int i,j;
+
+   for(i = 0; i < 2; i++)
+   {
+       for(j = 0; j < 3; j++)
+       {
+           cout << "Entre com nota: ";
+           cin >> numero[i][j];
+       }
+   }
+
+   for(i = 0; i < 2; i++)
+   {
+       for( j = 0; j < 3; j++)
+       {
+           cout << numero[i][j] << " ";
+       }
+       cout << endl;
+   }
+
+
+    for(i = 0; i < 2; i++)
+    {
+        for(j = 0; j < 3; j++)
+        {
+            if (numero[i][j] % 2 == 0)
+            {
+                cout << "par " << numero[i][j] <<endl;
+            }
+        }
+    }
+
+     for(i = 0; i < 2; i++)
+    {
+        for(j = 0; j < 3; j++)
+        {
+            if (numero[i][j] % 2 == 1)
+            {
+                cout << "impar " << numero[i][j] <<endl;
+            }
+        }
+    }
+
+}

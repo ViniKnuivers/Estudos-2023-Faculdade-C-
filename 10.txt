@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int vetUnitario[4];
+   int vetQuantidade[4];
+   int vetProduto[4];
+   int i;
+
+   for(i = 0; i < 3; i++)
+   {
+       cout << "Entre com Valor Unitario): ";
+       cin >> vetUnitario [i];
+
+       cout << "Entre com Quantidade: ";
+       cin >> vetQuantidade [i];
+
+       vetProduto[i] = vetUnitario[i] * vetQuantidade[i];
+   }
+
+    for(i = 0; i < 3; i++)
+    {
+        cout << vetUnitario[i] << " " << vetQuantidade[i] << " " << vetProduto[i] <<endl;
+    }
+}

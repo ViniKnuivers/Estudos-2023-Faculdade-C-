@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int vetA[3];
+   int vetB[3];
+   int vetSoma[3];
+   int i;
+
+   for(i = 0; i < 3; i++)
+   {
+       cout << "Entre com um numero: ";
+       cin >> vetA [i];
+
+       cout << "Entre com um numero: ";
+       cin >> vetB [i];
+
+       vetSoma[i] = vetA[i] + vetB[i]
+   }
+
+    for(i = 0; i < 3; i++)
+    {
+        cout << vetA[i] << " " << vetB[i] << " " << vetSoma[i] <<endl;
+    }
+}
