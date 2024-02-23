@@ -1,0 +1,66 @@
+#include <iostream>
+#define numVeiculos 1
+
+using namespace std;
+
+struct Veiculo
+{
+    int codigo;
+    string modelo;
+    string fabricante;
+    int ano;
+    string placa;
+    string cor;
+    int km;
+    float valor;
+};
+int main()
+{
+    Veiculo cadastro[numVeiculos];
+
+    cout << "Entre com os dados: \n";
+
+    for(int i = 0; i < numVeiculos; i++)
+    {
+        cout << "Entre com o codigo do veiculo: ";
+        cin >> cadastro[i].codigo;
+
+        cout << "Entre com o modelo do veiculo: ";
+        cin >> cadastro[i].modelo;
+
+        cout << "Entre com o fabricante do veiculo: ";
+        cin >> cadastro[i].fabricante;
+
+        cout << "Entre com o ano do veiculo: ";
+        cin >> cadastro[i].ano;
+
+        cout << "Entre com a placa do veiculo: ";
+        cin >> cadastro[i].placa;
+
+        cout << "Entre com a cor do veiculo: ";
+        cin >> cadastro[i].cor;
+
+        cout << "Entre com a km do veiculo: ";
+        cin >> cadastro[i].km;
+
+        cout << "Entre com o valor do veiculo: ";
+        cin >> cadastro[i].valor;
+    }
+
+    int buscaCodigo;
+    bool achou = false;
+
+    cout << "Informe o codigo do veiculo a ser pesquisado: ";
+    cin >> buscaCodigo;
+
+    for(int i = 0; i < numVeiculos;i++)
+    {
+        if(buscaCodigo == cadastro[i].codigo);
+        {
+            cout << "Codigo" <<"\t"<< "Modelo" <<"\t"<< "Fabricante" <<"\t"<< "Ano" <<"\t"<< "Placa" <<"\t"<< "Cor" <<"\t"<< "Km" <<"\t"<< "Valor" <<"\t"<<endl;
+            cout << cadastro[i].codigo <<"\t"<< cadastro[i].modelo <<"\t"<< cadastro[i].fabricante <<"\t"<< cadastro[i].ano <<"\t"<< cadastro[i].placa <<"\t"<< cadastro[i].cor <<"\t"<< cadastro[i].km <<"\t"<< cadastro[i].valor <<"\t"<<endl;
+
+            achou = true;
+        }
+    }
+}

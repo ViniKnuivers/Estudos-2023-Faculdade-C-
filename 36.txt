@@ -1,0 +1,135 @@
+#include <iostream>
+#include <locale.h>
+#include <stdio.h>
+
+using namespace std;
+
+int main()
+{
+    int opcao, capital, meses;
+    float montante, juros;
+
+    setlocale(LC_ALL,"portuguese");
+    capital = 0;
+    meses = 0;
+    montante = 0;
+
+    do
+    {
+        cout << "0 - SAIR" << endl << "1 - POUPANÇA SIMPLES" << endl << "2 - POUPANÇA PLUS" << endl << "3 - POUPANÇA MEGA" << endl;
+        cin >> opcao;
+
+
+        switch(opcao)
+        {
+            case 0:
+                {
+                   cout << "Fechou";
+                   break;
+                }
+
+            case 1:
+                {
+                    do
+                    {
+                        cout << "Qual o valor de investimento? "<<endl;
+                        cin >> capital;
+                    }while(capital < 100);
+
+                    do
+                    {
+                        cout << "Qual tempo aplicado? ( Exemplo: Quantos meses? 6.) " <<endl;
+                        cin >> meses;
+                    }while(meses < 3);
+
+                    if (capital >= 100 && meses >= 3)
+                    {
+                        juros = 0.01;
+                        montante = capital+((capital*juros)* meses);
+
+                        cout << "A opção de investimento escolhido foi: Poupança Simples"<<endl;
+                        cout << "O valor investido foi: " << capital <<endl;
+                        cout << "Os meses aplicado foram de: " << meses <<endl;
+                        cout << "O montante foi de: " << montante <<endl;
+                    }
+                    else
+                    {
+                        cout << "Não é possível começar a investir com esse valor ou tempo aplicado.";
+                    }
+                    break;
+                }
+
+            case 2:
+                {
+
+                    do
+                    {
+                        cout << "Qual o valor de investimento? "<<endl;
+                        cin >> capital;
+                    }while(capital < 500);
+
+                    do
+                    {
+                        cout << "Qual tempo aplicado? ( Exemplo: Quantos meses? 6.) " <<endl;
+                        cin >> meses;
+                    }while(meses < 6);
+                    if (capital >= 500 && meses >= 6)
+                    {
+                        juros = 0.015;
+                        montante = capital+((capital*juros)* meses);
+
+                        cout << "A opção de investimento escolhido foi: Poupança Plus"<<endl;
+                        cout << "O valor investido foi: " << capital <<endl;
+                        cout << "Os meses aplicado foram de: " << meses <<endl;
+                        cout << "O montante foi de: " << montante <<endl;
+                    }
+                    else
+                    {
+                        cout << "Não é possível começar a investir com esse valor ou tempo aplicado.";
+                    }
+                    break;
+                }
+
+            case 3:
+                {
+                    do
+                    {
+                        cout << "Qual o valor de investimento? "<<endl;
+                        cin >> capital;
+                    }while(capital < 1000);
+
+                    do
+                    {
+                        cout << "Qual tempo aplicado? ( Exemplo: Quantos meses? 6.) " <<endl;
+                        cin >> meses;
+                    }while(meses < 12);
+
+                    if (capital >= 1000 && meses >= 12)
+                    {
+                        juros = 0.02;
+                        montante = capital+((capital*juros)* meses);
+
+                        cout << "A opção de investimento escolhido foi: Poupança Mega"<<endl;
+                        cout << "O valor investido foi: " << capital <<endl;
+                        cout << "Os meses aplicado foram de: " << meses <<endl;
+                        cout << "O montante foi de: " << montante <<endl;
+                    }
+                    else
+                    {
+                        cout << "Não é possível começar a investir com esse valor ou tempo aplicado.";
+                    }
+                    break;
+                }
+
+            default:
+                {
+                    cout << " " <<endl;
+                    cout << "Opção Inválida" <<endl;
+                    cout << " " <<endl;
+                }
+
+        }
+
+    }while ( opcao < 0 || opcao > 3);
+
+}

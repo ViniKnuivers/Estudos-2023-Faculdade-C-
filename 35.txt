@@ -1,0 +1,36 @@
+#include <iostream>
+#define numAlunos 3
+
+using namespace std;
+
+struct Aluno
+{
+    int ra;
+    string nome;
+};
+int main()
+{
+    Aluno Alunos[numAlunos];
+
+    for(int i = 0; i < numAlunos; i++)
+    {
+        cout << "Entre com o RA da alunos: ";
+        cin >> Alunos[i].ra;
+
+        cout << "Entre com o nome do aluno: ";
+        cin >> Alunos[i].nome;
+    }
+
+    cout << "Imprimindo registros: \n";
+    for(int i = 0; i < numAlunos; i++)
+    {
+        cout << Alunos[i].ra << " " << Alunos[i].nome <<endl;
+    }
+
+    cout << "RA \tNome\n";
+    for(int i = 0; i < numAlunos;i++)
+    {
+        cout << Alunos[i].ra << "\t" << Alunos[i].nome <<endl;
+    }
+
+}
